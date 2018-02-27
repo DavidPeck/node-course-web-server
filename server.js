@@ -60,6 +60,13 @@ app.get('/about', (req, res) => {
     })
 });
 
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'Github Projects',
+        welcomeMessage: "github project listings"
+    })
+})
+
 app.get('/bad', (req, res) => {
     res.send({
         error: 'Bad request.'
